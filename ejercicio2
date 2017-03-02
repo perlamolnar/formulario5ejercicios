@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.container {
+		width:60%;
+		margin: auto;
+		margin-top: 6em;
+		font-family: sans-serif;
+		font-size: 14px;
+	}
+	img {
+    display: block;
+    margin: auto;
+    width: 100%;
+	}
+	#nombreMascota, #edad, #tipoMascota {
+		min-width: 60%;
+	}
+	</style>
+</head>
+
+<body style="background-color:#CEECF5">
+	<div class="container">
+		<div class="row">
+		<h2>REGISTRO DE ANIMALES</h2>
+			<form id="registro" action="php/recibeMascota.php" method="post" >
+					Nombrer de mascota:<br>
+					<input id="nombreMascota" type="text" name="nombreMascota" required>
+					<br><br>
+					Edad de la mascota:<br>
+					<input id="edad" name="edad" type="number" required min="1" max="20">
+					<br><br>
+					Tipo de mascota:
+					<br>
+					<select id="tipoMascota" name="tipoMascota" required class="initialized">
+						<option value="" disabled selected></option>
+						<option value="perro">perro</option>
+						<option value="gato">gato</option>
+						<option value="ave">ave</option>
+						<option value="pez">pez</option>
+						<option value="reptil">reptil</option>
+						<option value="otro">otro</option>
+					</select>
+					<br><br>
+					<input type="checkbox" name="castrado" value="Castrado">Marca la casilla si la mascota esta castrada.<br><br>
+
+					Numero de chip:<br>
+					<input id="edad" name="edad" type="text" required pattern="[0-9]{4}+[A-Za-z]{3}">
+					<br><br>
+
+  					<input type="submit" value="Enviar">
+				</form>
+			<br>
+			<img src="http://trentonpethospital.com/wp-content/uploads/pets.png">
+
+		</div>	
+	</div>	
+</body>
+</html>
+<!-- 
+Crea un formulario para el registro de animales de compañía con los siguientes campos:
+Nombre de la mascota (obligatorio)
+Edad de la mascota (valores entre 1 y 20) (obligatorio)
+Tipo de mascota (Desplegable con perro, gato, ave, pez, reptil, otro)
+Castrado con (checkbox) (obligatorio)
+Nº de chip (4 número y 3 letras)
+El action del formulario debe ser a la url "php/recibeMascota.php"
+El método debe ser por POST
+ -->
