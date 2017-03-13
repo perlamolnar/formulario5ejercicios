@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<style>
 	body {background-color:#CEECF5}
 	.container {
@@ -24,8 +25,8 @@
 <body>
 	<div class="container">
 		<form action="https://www.google.es/search" method="get">
-			Estoy buscando información sobre:<br><br>
-			<input id="searchbox" type="text" name="searchbox"<br>
+			<label for="searchbox">Estoy buscando información sobre:<br><br>
+			<input id="searchbox" type="text" name="q"<br>
 			<br><br>
 			<input id="boton" type="submit" name="q" value="Enviar">
 		</form>
